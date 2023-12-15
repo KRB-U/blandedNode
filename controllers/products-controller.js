@@ -1,18 +1,9 @@
 import fs from "fs/promises";
 import path from "path";
 import { ObjectId } from "bson";
+import { readFile, updateById } from "../services/servise.js";
 
 const pathToDb = path.resolve("db", "products.json");
-
-const readFile = async () => {
-  try {
-    const ourProducts = await fs.readFile(pathToDb);
-
-    return JSON.parse(ourProducts);
-  } catch (err) {
-    throw err;
-  }
-};
 
 async function getAllProducts(req, res, next) {
   try {
@@ -43,5 +34,15 @@ async function addNewProduct(req, res, next) {
     next(error);
   }
 }
+async function updateByIdController(req, res, next) {
+  try {
+    const { id } = req.params;
+    console.log("qwert", req.body);
+    const result = await updateById(id, req.body);
 
-export { addNewProduct, getAllProducts };
+    res.json(result);
+  } catch (error) {
+    next(error);
+  }
+}
+export { addNewProduct, getAllProducts, updateByIdController };

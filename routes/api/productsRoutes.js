@@ -2,11 +2,13 @@ import express from "express";
 import {
   addNewProduct,
   getAllProducts,
+  updateByIdController,
 } from "../../controllers/products-controller.js";
 import { validateNewProduct } from "../../middleware/validate-products.js";
 
 export const productsRouters = express.Router();
 
-productsRouters.get("/", validateNewProduct, getAllProducts);
+productsRouters.get("/", getAllProducts);
 
-productsRouters.post("/", addNewProduct);
+productsRouters.post("/", validateNewProduct, addNewProduct);
+productsRouters.patch("/:id", updateByIdController);
