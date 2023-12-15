@@ -1,5 +1,5 @@
 import express from "express";
-import { productsRouters } from "./routes/api/productsRoutes";
+import { productsRouters } from "./routes/api/productsRoutes.js";
 
 import logger from "morgan";
 import cors from "cors";
