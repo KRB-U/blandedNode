@@ -34,6 +34,7 @@ async function addNewProduct(req, res, next) {
     next(error);
   }
 }
+
 async function updateByIdController(req, res, next) {
   try {
     const { id } = req.params;
