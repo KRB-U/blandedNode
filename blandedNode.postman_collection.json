@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "27a55a7b-eddf-4bd9-a370-6af9cbbb70a6",
+		"name": "blandedNode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29255907"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YTE1ZmU2MTc0MDEzZDFjMTNhMWZmYiIsImlhdCI6MTcwNTA3NTMyMCwiZXhwIjoxNzA1MTU4MTIwfQ.CTL-YsSKUl9TN2ShlFxidhmfssVafYccvnB0LPaRyno",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTY4NGVjYmU4NWI5MjhmNjQzNzU1OCIsImlhdCI6MTcwNDM2NDg5NSwiZXhwIjoxNzA0NDIyNDk1fQ.vFtn-rMjXYKpaTfrG2DeZv_agQGqaSYguhY2Ij6MpT8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/api/contacts/6596780db1c8d55d68fbc672",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"contacts",
+						"6596780db1c8d55d68fbc672"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "current",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGRjNDIyY2E5Y2U3YTM3YWNiMjMyYiIsImlhdCI6MTcwMzkzOTY2MSwiZXhwIjoxNzA0MDIyNDYxfQ.04tidV_wVo7rtZKNhHTV7qShaY_f_cVRnf9PCwg_L_M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"jh,dgmh\",\r\n    \"email\": \"hsahbdg@dg.com\",\r\n    \"phone\": \"(453) 333-4444\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/api/users/current",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"users",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "favorite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTgxYjZlNDY5ZmZlMzE1ZjVhODdhMSIsImlhdCI6MTcwNDU2NTM4OCwiZXhwIjoxNzA0NjQ4MTg4fQ.6eBTpbs3pQR4Trsqni3IvULho7tgmT_6IQEvrfMJXGM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/api/contacts?page=6&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "6"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \",ghsdfg\",\r\n    \"email\": \"ghdvsdfgsgd@fj.ghjghj\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OGRjNDIyY2E5Y2U3YTM3YWNiMjMyYiIsImlhdCI6MTcwMzkzOTA3MiwiZXhwIjoxNzA0MDIxODcyfQ.RjYtqwbtbzrBvIPMk3CvS6ACVi7Ycw6PyfDKCucpVsM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ghdvsdfgsgd@fj.ghjghj\",\r\n    \"password\": \",ghsdfg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				},
+				"description": "login"
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTY4NGVjYmU4NWI5MjhmNjQzNzU1OCIsImlhdCI6MTcwNDM2NTkyMywiZXhwIjoxNzA0NDIzNTIzfQ.eUZTD1hHifzvVdG5a7C-S6ZzNQBV4Rxfluw3PAzHfx4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/api/users/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addProduct",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTgxYjZlNDY5ZmZlMzE1ZjVhODdhMSIsImlhdCI6MTcwNDgyMDA4MCwiZXhwIjoxNzA0OTAyODgwfQ.6R7_Z4ENbTpwaJbcPOVwrhXdoduShxeURLy3z85V8_A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"dhjdfh\",\r\n    \"price\": 226\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3005/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdSubScr",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OTgxYjZlNDY5ZmZlMzE1ZjVhODdhMSIsImlhdCI6MTcwNDQ2NzMyMSwiZXhwIjoxNzA0NTUwMTIxfQ.mQPhfDkt-4a_uezfEviAJA8pc9eV7bZ3wfkJ0jDw4YY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subscription\": \"pro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/api/users/subscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"users",
+						"subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3003/api/contacts/6596780db1c8d55d68fbc672",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3003",
+					"path": [
+						"api",
+						"contacts",
+						"6596780db1c8d55d68fbc672"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdAvatar",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/api/users/avatars",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"api",
+						"users",
+						"avatars"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
