@@ -7,6 +7,7 @@ import ProductModel from "../models/products/Products.js";
 const pathToDb = path.resolve("db", "products.json");
 
 async function getAllProducts(req, res, next) {
+  console.log(req.user);
   try {
     const products = await ProductModel.find();
     res.json(products);
