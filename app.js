@@ -3,6 +3,7 @@ import { productsRouters } from "./routes/api/productsRoutes.js";
 
 import logger from "morgan";
 import cors from "cors";
+import { authRouter } from "./routes/api/authRoutes.js";
 
 export const app = express();
 
@@ -13,7 +14,7 @@ app.use(logger("dev"));
 app.use(cors());
 
 app.use(express.json());
-
+app.use("/api/auth", authRouter);
 app.use("/api/products", productsRouters);
 
 app.use((req, res) => {
