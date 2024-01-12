@@ -4,6 +4,8 @@ import { productsRouters } from "./routes/api/productsRoutes.js";
 import logger from "morgan";
 import cors from "cors";
 
+import authRouter from "./routes/api/aut-router.js";
+
 export const app = express();
 
 // const formatsLogger = app.get("env") === "development" ? "dev" : "short";
@@ -14,6 +16,7 @@ app.use(cors());
 
 app.use(express.json());
 
+app.use("/api/users", authRouter);
 app.use("/api/products", productsRouters);
 
 app.use((req, res) => {

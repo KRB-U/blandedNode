@@ -6,7 +6,7 @@ const productSchema = new Schema(
     price: { type: Number, min: 1, index: true },
     sale: { type: Number, match: /[a-z]/ },
     imgURL: { type: String },
-    buff: Buffer,
+    // buff: Buffer,
   },
   { versionKey: false, timestamps: true }
 );
