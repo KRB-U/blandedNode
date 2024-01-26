@@ -4,7 +4,10 @@ import path from "path";
 const temporaryStorage = path.resolve("temp");
 
 const storage = multer.diskStorage({
-  destination: temporaryStorage,
+  destination: function (req, file, cb) {
+    cb(null, temporaryStorage);
+  },
+
   filename: function (req, file, cb) {
     cb(null, file.originalname);
   },

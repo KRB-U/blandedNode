@@ -6,3 +6,4 @@ import upload from "../../middleware/upload.js";
 
 authRouter.post("/register", upload.single("img"), validateUser, ctrl.register);
 authRouter.post("/login", upload.none(), validateUser, ctrl.login);
+authRouter.get("/verify/:verifCode", ctrl.verifyUser);

@@ -5,6 +5,11 @@ const userSchema = new Schema(
     email: String,
     password: String,
     img: String,
+    verify: {
+      type: Boolean,
+      default: false,
+    },
+    verifCode: String,
   },
   {
     versionKey: false,
