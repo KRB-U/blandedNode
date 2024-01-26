@@ -4,9 +4,9 @@ import { productsRouters } from "./routes/api/productsRoutes.js";
 import logger from "morgan";
 import cors from "cors";
 import { authRouter } from "./routes/api/authRoutes.js";
+import usersRouter from "./routes/api/usersRouter.js";
 
 export const app = express();
-
 // const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 
 app.use(logger("dev"));
@@ -17,6 +17,7 @@ app.use(express.json());
 app.use("/api/auth", authRouter);
 
 app.use("/api/products", productsRouters);
+app.use("/api/users", usersRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: "Not found" });

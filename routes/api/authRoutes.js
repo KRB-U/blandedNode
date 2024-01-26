@@ -6,10 +6,3 @@ export const authRouter = express.Router();
 
 authRouter.post("/register", validateUser, ctrl.register);
 authRouter.post("/login", validateUser, ctrl.login);
-authRouter.patch(
-  "/avatars",
-  upload.single("avatar"),
-  function (req, res, next) {
-    console.log(req.file, req.body);
-  }
-);
