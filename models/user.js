@@ -4,6 +4,7 @@ const userSchema = new Schema(
   {
     email: String,
     password: String,
+    img: String,
   },
   {
     versionKey: false,
