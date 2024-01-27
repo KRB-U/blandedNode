@@ -2,9 +2,9 @@ import { v2 as cloudinary } from "cloudinary";
 
 const options = {
   //   secure: true,
-  api_key: "722323863343339",
-  api_secret: "nBURK68yug6JcSdwneAkVzWUBrA",
-  cloud_name: "dngqzyhty",
+  api_key: "722311163223339",
+  api_secret: "nBURgs2ssd3fvHsHTedfhJcSdwneAkVzWUBrA",
+  cloud_name: "dnfdyvhjzyhty",
 };
 
 cloudinary.config(options);
